@@ -8,12 +8,15 @@
         <h4>マッチングアプリ</h4>
       </div>
     </div>
-    <div class="text-center">
-        <%= link_to '新規登録はこちら！', signup_path, class: 'btn btn-lg btn-primary' %>
-    </div>
-    
   </div>
 </div>
+
+<div class="text-center">
+  <h2>ログイン</h2>
+</div>
+<br>
+
+
 
 <div class="row">
   <div class="col-sm-6 offset-sm-3">
@@ -21,8 +24,8 @@
     <%= form_with(url: login_path, scope: :session, local: true) do |f| %>
     
       <div class="form-group">
-        <%= f.label :email, 'メールアドレス' %>
-        <%= f.email_field :email, class: 'form-control' %>
+        <%= f.label :name, 'ユーザー名' %>
+        <%= f.text_field :name, class: 'form-control' %>
       </div>
     
       <div class="form-group">

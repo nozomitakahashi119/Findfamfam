@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :require_user_logged_in, only: [:index, :show]
+  
   def index
     #@houses = House.order(id: :desc).page(params[:page]).per(25)
     #マイホーム、各ページへのリンクがある
@@ -18,7 +20,7 @@ class UsersController < ApplicationController
     
     if @user.save
       flash[:success] = 'ユーザーを登録しました。'
-      redirect_to @user
+      redirect_to root_path
     else
       flash.now[:danger] = 'ユーザーの登録に失敗しました。'
       render :new
