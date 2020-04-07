@@ -10,7 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_29_080543) do
+ActiveRecord::Schema.define(version: 2020_04_06_142956) do
+
+  create_table "houses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "title"
+    t.string "place"
+    t.string "room_size"
+    t.string "rent"
+    t.string "gender"
+    t.string "special_notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_houses_on_user_id"
+  end
+
+  create_table "shares", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "house_id"
+    t.boolean "ok_request", default: false, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["house_id"], name: "index_shares_on_house_id"
+    t.index ["user_id"], name: "index_shares_on_user_id"
+  end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -25,4 +48,7 @@ ActiveRecord::Schema.define(version: 2020_03_29_080543) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "houses", "users"
+  add_foreign_key "shares", "houses"
+  add_foreign_key "shares", "users"
 end

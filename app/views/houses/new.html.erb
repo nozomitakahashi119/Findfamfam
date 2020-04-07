@@ -1,0 +1,46 @@
+<div class="text-center">
+  <h2>新規募集投稿</h2>
+</div>
+<br>
+
+<div class="row">
+  <div class="col-sm-6 offset-sm-3">
+    
+    <%= form_with(model: @house, local: true) do |f| %>
+      <%= render 'layouts/error_messages', model: f.object %>
+      <%# エラーメッセージ %>
+    
+      <div class="form-group">
+        <%= f.label :title, '募集件名' %>
+        <%= f.text_field :title, class: 'form-control' %>
+      </div>
+      
+      <div class="form-group">
+        <%= f.label :place, '場所' %>
+        <%= f.text_field :place, class: 'form-control' %>
+      </div>
+      
+      <div class="form-group">
+        <%= f.label :room_size, '部屋の広さ' %>
+        <%= f.text_field :room_size, class: 'form-control' %>
+      </div>
+      
+      <div class="form-group">
+        <%= f.label :rent, '賃料' %>
+        <%= f.text_field :rent, class: 'form-control' %>
+      </div>
+      
+      <div class="form-group">
+        <%= f.label :gender, '性別' %>
+        <%= f.text_field :gender, class: 'form-control' %>
+      </div>
+      
+      <div class="form-group">
+        <%= f.label :special_notes, 'その他特記事項' %>
+        <%= f.text_field :special_notes, class: 'form-control' %>
+      </div>
+      
+      <%= f.submit '新規募集登録', class: 'btn btn-primary btn-block' %>
+    <% end %>
+  </div>
+</div>

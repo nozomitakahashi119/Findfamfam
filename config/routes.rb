@@ -6,5 +6,8 @@ Rails.application.routes.draw do
   delete 'logout', to: 'sessions#destroy'
   
   get 'signup', to: 'users#new'
-  resources :users, only: [:index, :show, :new, :create]
+  resources :users, only: [:index, :show, :new, :create, :edit]
+  
+  resources :houses, only: [:index, :show, :new, :create, :destroy]
+  #maicropostsの時はindex,showがusersと紐付けてusersで表示するためいらなかった
 end
