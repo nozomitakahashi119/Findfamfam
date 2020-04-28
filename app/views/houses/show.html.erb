@@ -8,3 +8,21 @@
     <li>その他特記事項：<%= @house.special_notes %></li>
   </ul>
 </div>
+<br>
+
+<div class="row">
+  <ul>
+    <li>
+      <% if @house.user != current_user %>
+        <%= render 'shares/request_button', house: @house %>
+      <% else %>
+        <%= render 'shares/request_users', house: @house %>
+      <% end %>
+    </li>
+  </ul>
+  <div>
+    <% if @house.user != current_user %>
+      <%= render 'favorites/like_button', house: @house %>
+    <% end %>
+  </div>
+</div>

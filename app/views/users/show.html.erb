@@ -1,28 +1,36 @@
 <div class="row">
-  <h2><%= @user.name %>のプロフィール</h2>
-    <div class="col-lg-6">
+  <div class="col-lg-6">
+    <h2 class="text-center"><%= @user.name %>のプロフィール</h2>
+    <br>
+      ユーザー名
       <div class="card text-center card-block">
-        <h3 class="card-title"><%= @user.name %></h3>
+        <h4 class="card-title"><%= @user.name %></h4>
       </div>
       <br>
+      メールアドレス
       <div class="card text-center card-block">
-        <h3 class="card-title"><%= @user.email %></h3>
+        <h4 class="card-title"><%= @user.email %></h4>
       </div>
       <br>
+      年齢
       <div class="card text-center card-block">
-        <h3 class="card-title"><%= @user.age %></h3>
+        <h4 class="card-title"><%= @user.age %></h4>
       </div>
       <br>
+      性別
       <div class="card text-center card-block">
-        <h3 class="card-title"><%= @user.gender %></h3>
+        <h4 class="card-title"><%= @user.gender %></h4>
       </div>
       <br>
+      趣味
       <div class="card text-center card-block">
-        <h3 class="card-title"><%= @user.hobby %></h3>
+        <h4 class="card-title"><%= @user.hobby %></h4>
       </div>
       <br>
+      特記事項その他
       <div class="card text-center card-block">
-        <h3 class="card-title"><%= @user.special_notes %></h3>
+        <h4 class="card-title"><%= @user.special_notes %></h4>
       </div>
-    </div>
+      <%= link_to 'ユーザー情報を変更する', edit_user_path %>
+  </div>
 </div>

@@ -1,0 +1,64 @@
+<div class="text-center">
+  <h2>ユーザー情報の変更</h2>
+</div>
+<br>
+
+<div class="row">
+  <div class="col-sm-6 offset-sm-3">
+    
+    <%= form_with(model: @user, local: true) do |f| %>
+      <%= render 'layouts/error_messages', model: f.object %>
+      <%# エラーメッセージ %>
+    
+      <div class="form-group">
+        <%= f.label :name, 'ユーザー名' %>
+        <%= f.text_field :name, class: 'form-control' %>
+      </div>
+      
+      <div class="form-group">
+        <%= f.label :email, 'メールアドレス' %>
+        <%= f.email_field :email, class: 'form-control' %>
+      </div>
+      
+      <div class="form-group">
+        <%= f.label :password, 'パスワード' %>
+        <%= f.password_field :password, class: 'form-control' %>
+      </div>
+      
+      <div class="form-group">
+        <%= f.label :password_confirmation, 'パスワード（確認用）' %>
+        <%= f.password_field :password_confirmation, class: 'form-control' %>
+      </div>
+      
+      <div class="form-group">
+        <%= f.label :age, '年齢' %>
+        <%= f.text_field :age, class: 'form-control' %>
+      </div>
+      
+      <div class="form-group">
+        <%= f.label :gender, '性別' %>
+        <%= f.select :gender, [["",""], ["男性","男性"], ["女性","女性"], ["その他","その他"]], {}, class: 'form-control' %>
+      </div>
+      
+      <div class="form-group">
+        <%= f.label :income, 'おおよそ月収' %>
+        <%= f.text_field :income, class: 'form-control' %>
+      </div>
+      
+      <div class="form-group">
+        <%= f.label :hobby, '趣味' %>
+        <%= f.text_field :hobby, class: 'form-control' %>
+      </div>
+      
+      <div class="form-group">
+        <%= f.label :special_notes, 'その他特記事項' %>
+        <%= f.text_field :special_notes, class: 'form-control' %>
+      </div>
+      
+      <div class="al-c">
+        <%= f.submit '変更を登録する', class: 'btn btn-primary btn-block' %>
+      </div>
+    
+    <% end %>
+  </div>
+</div>

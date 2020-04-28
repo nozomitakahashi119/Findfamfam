@@ -1,61 +1,42 @@
-<%# render 'houses', houses: @houses %>
-<div class="row">
-  <div class="col-lg-6">
-    <a href="#" class="card text-center">
-      <div class="card-block">
-        <h5 class="card-title">みんなの</h5>
-        <h1 class="card-title">募集一覧</h1>
-      </div>
-    </a>
-  </div>
-</div>
-<br>
 <div class="row">
   <div class="col-lg-6">
     <div class="card text-center">
-    <%= link_to '私の', houses_path %>
-    <%= link_to '募集一覧', houses_path %>
-      <div class="card-block">
-        <!--h5 class="card-title">私の</h5>
-        <h1 class="card-title">募集一覧</h1-->
-      </div>
+      <%= link_to 'みんなの募集一覧', houses_path %>
     </div>
   </div>
 </div>
 <br>
 <div class="row">
   <div class="col-lg-6">
-    <a href="#" class="card text-center">
-      <div class="card-block">
-        <h5 class="card-title">私の</h5>
-        <h1 class="card-title">お気に入り</h1>
-      </div>
-    </a>
+    <div class="card text-center">
+      <%= link_to '私の募集一覧', "/users/#{current_user.id}/index" %>
+    </div>
   </div>
 </div>
 <br>
 <div class="row">
   <div class="col-lg-6">
-    <a href="#" class="card text-center">
-      <div class="card-block">
-        <h5 class="card-title">私が</h5>
-        <h1 class="card-title">申請した</h1>
-        <h1 class="card-title">募集一覧</h1>
-      </div>
-    </a>
+    <div class="card text-center">
+         <%= link_to '私のお気に入り一覧', "#" %>
+    </div>
   </div>
 </div>
 <br>
 <div class="row">
   <div class="col-lg-6">
-    <a href="#" class="card text-center">
-      <div class="card-block">
-        <h5 class="card-title">私の</h5>
-        <h1 class="card-title">自己紹介</h1>
-      </div>
-    </a>
+    <div class="card text-center">
+      <%= link_to '私の申請した募集一覧', "/users/#{current_user.id}/request" %>
+    </div>
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-lg-6">
+    <div class="card text-center">
+      <%= link_to '私の自己紹介', "/users/#{current_user.id}" %>
+    </div>
   </div>
 </div>
 <br>
 
-<%= link_to '新規作成', new_house_path %>
+<%= link_to '同居募集の新規作成', new_house_path %>

@@ -1,0 +1,5 @@
+<% house.shares.each do |share| %>
+    <p><%= share.user.name %></p>
+    <%= render 'shares/ok_button', user: share.user, house: house %>
+<% end %>
+

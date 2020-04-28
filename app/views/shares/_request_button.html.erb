@@ -1,0 +1,13 @@
+<% unless current_user.shares.build.house == house %>
+  <% if current_user.requesting?(house) %>
+    <%= form_with(model: current_user.shares.find_by(house_id: house.id), local: true, method: :delete) do |f| %>
+      <%= hidden_field_tag :house_id, house.id %>
+      <%= f.submit '同居申請取り消し', class: 'btn btn-danger btn-block' %>
+    <% end %>
+  <% else %>
+    <%= form_with(model: current_user.shares.build, local: true) do |f| %>
+      <%= hidden_field_tag :house_id, house.id %>
+      <%= f.submit '同居申請をする', class: 'btn btn-primary btn-block' %>
+    <% end %>
+  <% end %>
+<% end %>

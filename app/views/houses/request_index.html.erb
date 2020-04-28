@@ -4,9 +4,9 @@
       <% @houses.each do |house| %>
         <li class="card">
           <div class="card-body">
-            <div>募集者　：<%= link_to house.user.name, user_path(house.user) %></div>
-            <div>投稿日　：<%= house.created_at %></div>
-            <div>タイトル：<%= link_to house.title, house_path(house.id) %></div>
+            <div>募集主　：<%= link_to house.house.user.name, user_path(house.house.user) %></div>
+            <div>申請した募集　：<%= link_to house.house.title, house_path(house.house) %></div>
+            <div>申請した日　：<%= house.created_at %></div>
           </div>
         </li>
         <br>

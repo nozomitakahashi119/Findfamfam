@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
-  before_action :require_user_logged_in, only: [:index, :show]
+  before_action :require_user_logged_in, only: [:index, :show, :edit] #ログインユーザーしか触れない
+  #before_action :correct_user, only: [:show, :edit, :update]
   
   def index
-    #@houses = House.order(id: :desc).page(params[:page]).per(25)
     #マイホーム、各ページへのリンクがある
   end
 
@@ -28,11 +28,44 @@ class UsersController < ApplicationController
   end
   
   def edit
+    @user = User.find(params[:id])
   end
-end
+  
+  def update
+    
+    @user = User.find(params[:id])
+    
+    if current_user == @user
+    
+      if @user.update(user_params)
+        flash[:success] = 'ユーザー情報を更新しました。'
+        redirect_to root_path
+      else
+        flash.now[:danger] = 'ユーザー情報を更新できませんでした'
+        render :edit
+      end
+      
+    else
+      redirect_to root_path
+    end
+    
+  end
+  
+  #shares_controllerにあるdef permit_shareをこちらに書いても同様の動きをした
+  
+  private
 
-private
+  def user_params
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, :age, :gender, :income, :hobby, :special_notes )
+  end
 
-def user_params
-  params.require(:user).permit(:name, :email, :password, :password_confirmation)
+  
+=begin
+  def correct_user #本人かどうか確認、違うとすれば一覧に遷移
+    @user = current_user.users.find_by(params[:id])
+    unless @user
+      redirect_to root_url
+    end
+=end
+
 end

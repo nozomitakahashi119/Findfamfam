@@ -10,4 +10,9 @@ class ApplicationController < ActionController::Base
     end
   end
   
+  def counts(house)
+    @counts_houses = user.houses.count
+    @counts_requestings = user.requestings.count
+  end
+  
 end
