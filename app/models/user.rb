@@ -47,15 +47,27 @@ class User < ApplicationRecord
   def permitted_appliments?(house)
     return self.shares.where(ok_request: 1)
   end
-
   
-  def permit_share?(house) #申請してるかの確認
-    count = self.shares.where(ok_request: 1).count
-    return count > 0
+  def p
+    Share.find_by(house_id: 4)
   end
   
-  def permit_share?(zero="0") #申請してるかの確認
-    count = Share.where(ok_request: true).count
+  def permit_share?(house, user_id) #申請してるかの確認
+    #count = Share.find_by(house_id: 4)&.ok_request == true
+    #count > 0 
+    #return count > 0
+    #Share.ok_request == 1
+    #Share.where(user_id: self)&(ok_request == 1)
+    #Share.where('ok_request > 0', 1.day.ago).first
+    Share.where(ok_request: "1", house_id: house.id, user_id: user_id).exists?
+    #puts p
+    #Share.find_by(house_id: self)
+    #Share.where(ok_request: 1).count > 0
+    #return self.shares.where(ok_request: 1)
+  end
+  
+  def permit_shareO?(zero="0") #申請してるかの確認
+    count = self.shares.where(ok_request: true).count
     count > 0 ? count.to_s : zero
   end
   
