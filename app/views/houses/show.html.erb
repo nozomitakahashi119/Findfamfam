@@ -1,28 +1,45 @@
-<div class="card">
-  <ul>
-    <li>募集件名：<%= @house.title %></li>
-    <li>市区町村、最寄駅：<%= @house.place %></li>
-    <li>物件の間取り：<%= @house.room_size %></li>
-    <li>１人あたりの賃料：<%= @house.rent %></li>
-    <li>性別の制限：<%= @house.gender %></li>
-    <li>その他特記事項：<%= @house.special_notes %></li>
-  </ul>
-</div>
-<br>
-
 <div class="row">
-  <ul>
-    <li>
-      <% if @house.user != current_user %>
-        <%= render 'shares/request_button', house: @house %>
-      <% else %>
-        <%= render 'shares/request_users', house: @house %>
-      <% end %>
-    </li>
-  </ul>
-  <div>
-    <% if @house.user != current_user %>
-      <%= render 'favorites/like_button', house: @house %>
-    <% end %>
+  <div class="col-xl-3"></div>
+  <div class="col-xl-6 col-sm-12">
+    
+    <h3 class="text-center">募集の詳細</h3>
+    
+    <p class="house-title">募集タイトル</p>
+    <div class="card text-center house-text"><%= @house.title %></div>
+      
+    <p class="house-title">居住場所または希望場所</p>
+    <div class="card text-center house-text"><%= @house.place %></div>
+      
+    <p class="house-title">部屋の広さ（１人当たり）</p>
+    <div class="card text-center house-text"><%= @house.room_size %></div>
+      
+    <p class="house-title">賃料（１人当たり）</p>
+    <div class="card text-center house-text"><%= @house.rent %></div>
+    
+    <p class="house-title">性別の希望</p>
+    <div class="card text-center house-text"><%= @house.gender %></div>
+      
+    <p class="house-title">自己紹介・特記事項</p>
+    <div class="card house-text2"><%= @house.special_notes %></div>
+    
+    <div class="row">
+      <div class="col-xl-12">
+        <div class="form-btn">
+        <%= render 'favorites/like_button', house: @house %>
+        </div>
+      </div>
+      <div class="col-xl-12">
+        <% if @house.user != current_user %>
+          <div class="form-btn">
+          <%= render 'shares/request_button', house: @house %>
+          </div>
+        <% else %>
+          <%= render 'shares/request_users', house: @house %>
+        <% end %>
+      </div>
+    </div>
+    
   </div>
+  <div class="col-xl-3"></div>
+
 </div>

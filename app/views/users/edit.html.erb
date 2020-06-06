@@ -1,10 +1,8 @@
-<div class="text-center">
-  <h2>ユーザー情報の変更</h2>
-</div>
-<br>
+<h2 class="text-center">ユーザー情報の変更</h2>
 
 <div class="row">
-  <div class="col-sm-6 offset-sm-3">
+  <div class="col-xl-3"></div>
+  <div class="col-xl-6 col-sm-12">
     
     <%= form_with(model: @user, local: true) do |f| %>
       <%= render 'layouts/error_messages', model: f.object %>
@@ -51,14 +49,16 @@
       </div>
       
       <div class="form-group">
-        <%= f.label :special_notes, 'その他特記事項' %>
-        <%= f.text_field :special_notes, class: 'form-control' %>
+        <%= f.label :special_notes, '自己紹介・特記事項' %>
+        <%= f.text_field :special_notes, class: 'form-control profile-text2' %>
       </div>
       
       <div class="al-c">
-        <%= f.submit '変更を登録する', class: 'btn btn-primary btn-block' %>
+        <%= f.submit '変更を登録する', class: 'btn btn-red btn-block' %>
       </div>
     
     <% end %>
+    <div class="col-xl-3"></div>
+    
   </div>
 </div>

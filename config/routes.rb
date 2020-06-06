@@ -18,6 +18,8 @@ Rails.application.routes.draw do
   delete '/unpermit_share', to: 'shares#unpermit_share'
   get '/users/:id/index', to: 'houses#my_index'
   get '/users/:id/request', to: 'houses#my_request_index'
+  get '/users/:id/like', to: 'houses#my_like_index'
+  get '/todolist', to: 'users#to_do_list'
   
   resources :houses, only: [:index, :show, :new, :create, :destroy]
   #micropostsの時はindex,showがusersと紐付けてusersで表示するためいらなかった

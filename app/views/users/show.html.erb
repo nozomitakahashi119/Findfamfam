@@ -1,36 +1,36 @@
 <div class="row">
-  <div class="col-lg-6">
-    <h2 class="text-center"><%= @user.name %>のプロフィール</h2>
-    <br>
-      ユーザー名
-      <div class="card text-center card-block">
-        <h4 class="card-title"><%= @user.name %></h4>
-      </div>
-      <br>
-      メールアドレス
-      <div class="card text-center card-block">
-        <h4 class="card-title"><%= @user.email %></h4>
-      </div>
-      <br>
-      年齢
-      <div class="card text-center card-block">
-        <h4 class="card-title"><%= @user.age %></h4>
-      </div>
-      <br>
-      性別
-      <div class="card text-center card-block">
-        <h4 class="card-title"><%= @user.gender %></h4>
-      </div>
-      <br>
-      趣味
-      <div class="card text-center card-block">
-        <h4 class="card-title"><%= @user.hobby %></h4>
-      </div>
-      <br>
-      特記事項その他
-      <div class="card text-center card-block">
-        <h4 class="card-title"><%= @user.special_notes %></h4>
-      </div>
-      <%= link_to 'ユーザー情報を変更する', edit_user_path %>
+  <div class="col-xl-3"></div>
+  <div class="col-xl-6 col-sm-12">
+    <h3 class="text-center"><%= @user.name %>さんのプロフィール</h3>
+    
+    <p class="profile-title">ユーザー名</p>
+    <div class="card text-center profile-text"><%= @user.name %></div>
+      
+    <p class="profile-title">メールアドレス</p>
+    <div class="card text-center profile-text"><%= @user.email %></div>
+      
+    <p class="profile-title">年齢</p>
+    <div class="card text-center profile-text"><%= @user.age %></div>
+      
+    <p class="profile-title">性別</p>
+    <div class="card text-center profile-text"><%= @user.gender %></div>
+    
+    <p class="profile-title">月収</p>
+    <div class="card text-center profile-text"><%= @user.income %></div>
+      
+    <p class="profile-title">趣味</p>
+    <div class="card text-center profile-text"><%= @user.hobby %></div>
+      
+    <p class="profile-title">自己紹介</p>
+    <div class="card profile-text2"><%= @user.special_notes %></div>
+      
+    <div class="form-btn">
+      <% if current_user?(@user) %> 
+        <%= link_to 'ユーザー情報を変更する', edit_user_path, class: 'btn btn-blue btn-block' %>
+      <% end %>
+    </div>
   </div>
+  
+  <div class="col-xl-3"></div>
+  
 </div>

@@ -1,0 +1,583 @@
+body {
+  font-family: YuGothic;
+  height: 100%;
+  margin: 0;
+}
+
+.sticky-top {
+  background-color: white;
+  height: 65px;
+}
+
+main {
+  min-height: 100%;
+  margin-bottom: 80px;
+}
+
+.wrapper{
+    height: 100%;
+    min-height: 100vh;
+    position: relative;/*←相対位置*/
+    padding-bottom: 300px;/*←footerの高さ*/
+    box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
+}
+
+footer{
+    width: 100%;
+    color: black;
+    position: absolute;/*←絶対位置*/
+    bottom: 0; /*下に固定*/
+}
+
+.navbar {
+  outline-color: #FF5A5F;
+}
+
+.btn-nav {
+  margin: 4px 4px 0px 4px;
+}
+
+.apptitle {
+  color: red;
+  font-size: 26px;
+  font-family: Georgia;
+  margin-top: 8px;
+  margin-right: 0px;
+}
+
+.thema {
+  color: #FF5A5F;
+  font-family: Osaka;
+}
+
+.new-user-title {
+  color: white;
+  text-shadow: 0.5px 0.5px 0 #000,
+               0.5px 0.5px 0 #000,
+               0.5px 0.5px 0 #000,
+               0.5px 0.5px 0 #000;
+}
+
+.footer {
+  background-color: #f8f4e6;
+  height: 230px;
+}
+
+.footer-item {
+	margin-top: 12px;
+}
+
+.footer-item a {
+	color: #FF5A5F;
+	margin: 8px;
+}
+
+.btn-red {
+  background-color: #FF5A5F;
+  border-color: #FF5A5F;
+  color: white;
+}
+
+.btn-red:hover {
+  background-color: white;
+  color: #FF5A5F;
+}
+
+.btn-yellow {
+  background-color: #e6b422;
+  border-color: #e6b422;
+  color: white;
+}
+
+.btn-yellow:hover {
+  background-color: white;
+  color: #e6b422;
+}
+
+.btn-blue {
+  background-color: #17A2B8;
+  border-color: #17A2B8;
+  color: white;
+}
+
+.btn-blue:hover {
+  background-color: white;
+  color: #17A2B8;
+}
+
+.jumbotron {
+  background-image: url(img2.jpg);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 430px;
+  color: black;
+  letter-spacing: 1em;
+  font-weight: 900;
+  font-family: Georgia;
+}
+
+.blue-link a {
+  color: #17A2B8;
+	margin: 8px;
+}
+
+.profile {
+  height: 40px;
+  padding: 5px;
+}
+
+.footer-img {
+  background-image: url(house3.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 180px;
+}
+
+.top-title {
+  margin: 35px 0px 10px 0px;
+}
+
+.top-text {
+  margin: 10px 0px 40px 0px;
+  font-size: 22px;
+}
+
+.top-title2 {
+  margin: 35px 0px 10px 15px;
+}
+
+.top-text2 {
+  margin: 0px 0px 20px 20px;
+  font-size: 22px;
+}
+
+.top-subtitle {
+  font-size: 25px;
+  margin: 5px 8px 5px 8px;
+  border: 0rem;
+}
+
+.top-subtext {
+  padding: 0px 0px 0px 0px;
+}
+
+.card {
+  margin: 5px 10px 5px 10px;
+  border-color: #FF5A5F;
+}
+
+.card-body {
+  margin: 3px 18px 3px 18px;
+  padding: 10px;
+  border: none;
+  font-size: 20px;
+}
+
+.house {
+  display: inline-table;
+  padding: 15px;
+  margin-top: 15px;
+}
+
+.request-card {
+  display: inline-table;
+  margin: 0px;
+  padding:  0px;
+}
+
+.form-btn {
+  padding: 0px;
+  margin: 10px;
+}
+
+.profile-title {
+  margin: 10px 10px;
+}
+
+.profile-text {
+  font-size: 20px;
+  height: 40px;
+  padding: 3px;
+}
+
+.profile-text2 {
+  font-size: 17px;
+  height: 400px;
+  padding: 5px 10px;
+}
+
+.house-title {
+  margin: 10px 10px;
+}
+
+.house-text {
+  font-size: 20px;
+  height: 40px;
+  padding: 3px;
+}
+
+.house-text2 {
+  font-size: 17px;
+  height: 400px;
+  padding: 5px 10px;
+}
+
+.ok-btn {
+  margin: 0px 10px 10px 10px;
+  padding: 10px;
+}
+
+section {
+  border-radius: 10px;
+  border: 0.1rem solid;
+  border-color: #FF5A5F;
+  margin: 50px 0px 50px 0px;
+  padding: 10px 15px 20px 15px;
+}
+
+.topic1 {
+  background-image: url(img4.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 150px;
+  margin: 0 auto;
+  overflow: hidden;
+  cursor: pointer;
+  width: 100%;
+  transition-duration: 0.5s;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.topic1:hover {
+  transform: scale(1.2);
+  transition-duration: 0.5s;
+}
+
+.topic1 a {/*aタグを画像の真ん中に*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  /*以下装飾*/
+  margin:0;/*余計な隙間を除く*/
+  font-size: 35px;/*文字サイズ*/
+  border: solid white 8px; /*線で囲う*/
+  padding: 20px;/*文字と線の間の余白*/
+  color: white;/*文字色*/
+  text-decoration: none;/*下線を表示させない*/
+  text-shadow: 0.5px 0.5px 0 #000,
+               0.5px 0.5px 0 #000,
+               0.5px 0.5px 0 #000,
+               0.5px 0.5px 0 #000;
+  }
+
+.topic2 {
+  background-image: url(img1.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 450px;
+  margin: 0 auto;
+  overflow: hidden;
+  cursor: pointer;
+  width: 100%;
+  transition-duration: 0.5s;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.topic2:hover {
+  transform: scale(1.2);
+  transition-duration: 0.5s;
+}
+
+.topic2 a {/*aタグを画像の真ん中に*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  /*以下装飾*/
+  margin:0;/*余計な隙間を除く*/
+  font-size: 35px;/*文字サイズ*/
+  border: solid white 8px; /*線で囲う*/
+  padding: 25px;/*文字と線の間の余白*/
+  color: white;/*文字色*/
+  text-decoration: none;/*下線を表示させない*/
+  text-shadow: 0.5px 0.5px 0 #000,
+               0.5px 0.5px 0 #000,
+               0.5px 0.5px 0 #000,
+               0.5px 0.5px 0 #000;
+  }
+
+.topic3 {
+  background-image: url(toppage3.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 450px;
+  margin: 0 auto;
+  overflow: hidden;
+  cursor: pointer;
+  width: 100%;
+  transition-duration: 0.5s;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.topic3:hover {
+  transform: scale(1.2);
+  transition-duration: 0.5s;
+}
+
+.topic3 a {/*aタグを画像の真ん中に*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  /*以下装飾*/
+  margin:0;/*余計な隙間を除く*/
+  font-size: 40px;/*文字サイズ*/
+  border: solid white 8px; /*線で囲う*/
+  padding: 25px;/*文字と線の間の余白*/
+  color: white;/*文字色*/
+  text-decoration: none;/*下線を表示させない*/
+  text-shadow: 0.5px 0.5px 0 #000,
+               0.5px 0.5px 0 #000,
+               0.5px 0.5px 0 #000,
+               0.5px 0.5px 0 #000;
+  }
+
+.topic4 {
+  background-image: url(img5.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 450px;
+  margin: 0 auto;
+  overflow: hidden;
+  cursor: pointer;
+  width: 100%;
+  transition-duration: 0.5s;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.topic4:hover {
+  transform: scale(1.2);
+  transition-duration: 0.5s;
+}
+
+.topic4 a {/*aタグを画像の真ん中に*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  /*以下装飾*/
+  margin:0;/*余計な隙間を除く*/
+  font-size: 40px;/*文字サイズ*/
+  border: solid white 8px; /*線で囲う*/
+  padding: 30px;/*文字と線の間の余白*/
+  color: white;/*文字色*/
+  text-decoration: none;/*下線を表示させない*/
+  text-shadow: 0.5px 0.5px 0 #000,
+               0.5px 0.5px 0 #000,
+               0.5px 0.5px 0 #000,
+               0.5px 0.5px 0 #000;
+  }
+
+.topic5 {
+  background-image: url(toppage2.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 350px;
+  margin: 0 auto;
+  overflow: hidden;
+  cursor: pointer;
+  width: 100%;
+  transition-duration: 0.5s;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.topic5:hover {
+  transform: scale(1.2);
+  transition-duration: 0.5s;
+}
+
+.topic5 a {/*aタグを画像の真ん中に*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  /*以下装飾*/
+  margin:0;/*余計な隙間を除く*/
+  font-size: 30px;/*文字サイズ*/
+  border: solid white 8px; /*線で囲う*/
+  padding: 30px;/*文字と線の間の余白*/
+  color: white;/*文字色*/
+  text-decoration: none;/*下線を表示させない*/
+  text-shadow: 0.5px 0.5px 0 #000,
+               0.5px 0.5px 0 #000,
+               0.5px 0.5px 0 #000,
+               0.5px 0.5px 0 #000;
+  }
+  
+.topic6 {
+  background-image: url(toppage1.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 350px;
+  margin: 0 auto;
+  overflow: hidden;
+  cursor: pointer;
+  width: 100%;
+  transition-duration: 0.5s;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.topic6:hover {
+  transform: scale(1.2);
+  transition-duration: 0.5s;
+}
+
+.topic6 a {/*aタグを画像の真ん中に*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  /*以下装飾*/
+  margin:0;/*余計な隙間を除く*/
+  font-size: 25px;/*文字サイズ*/
+  border: solid white 8px; /*線で囲う*/
+  padding: 30px;/*文字と線の間の余白*/
+  color: white;/*文字色*/
+  text-decoration: none;/*下線を表示させない*/
+  text-shadow: 0.5px 0.5px 0 #000,
+               0.5px 0.5px 0 #000,
+               0.5px 0.5px 0 #000,
+               0.5px 0.5px 0 #000;
+  }
+  
+.topic7 {
+  background-image: url(img7.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 350px;
+  margin: 0 auto;
+  overflow: hidden;
+  cursor: pointer;
+  width: 100%;
+  transition-duration: 0.5s;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.topic7:hover {
+  transform: scale(1.2);
+  transition-duration: 0.5s;
+}
+
+.topic7 a {/*aタグを画像の真ん中に*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  /*以下装飾*/
+  margin:0;/*余計な隙間を除く*/
+  font-size: 35px;/*文字サイズ*/
+  border: solid white 8px; /*線で囲う*/
+  padding: 35px;/*文字と線の間の余白*/
+  color: white;/*文字色*/
+  text-decoration: none;/*下線を表示させない*/
+  text-shadow: 0.5px 0.5px 0 #000,
+               0.5px 0.5px 0 #000,
+               0.5px 0.5px 0 #000,
+               0.5px 0.5px 0 #000;
+  }
+
+.move a:hover{/*カーソルを当てたとき*/
+  background: white;
+  color: #FF5A5F;
+  text-shadow: none;
+  }
+
+/*
+.move { 画像が拡大する動きに枠を設ける
+  position: relative;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 450px;
+  margin: 0 auto;
+  overflow: hidden;
+  cursor: pointer;
+  width: 100%;
+  transition-duration: 0.5s;
+  }
+*/
+
+.pagination {
+  margin: 10px;
+}
+
+/*ページネーション自体のデザイン*/
+.pagination>li>a {          
+  border: none;     /*枠線をなくす*/
+  color: #FF5A5F;   /*文字の色を変える*/
+  padding: 15px;
+  margin: 2px;
+  background-color: white;
+}
+
+/* 表示しているページ番号のデザイン */
+.pagination>.active>a {     
+  border-radius: 5px;     /*角を丸くする*/
+  color: white;
+}
+
+.pagination>.active>a.page-link {     
+  border-radius: 5px; /*角を丸くする*/
+  border-color: #FF5A5F;
+  border: 0.08rem solid; 
+  color: #FF5A5F;
+  background-color: white;
+}
+
+/*ホバー時のデザイン*/
+.pagination>li>a:hover {        
+  border-radius: 5px;/*角を丸くする*/
+  background-color: #FF5A5F;
+  color: white;
+}

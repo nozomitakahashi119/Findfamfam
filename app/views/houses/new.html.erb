@@ -1,46 +1,43 @@
-<div class="text-center">
-  <h2>新規募集投稿</h2>
-</div>
-<br>
+<h2 class="text-center">新規募集投稿</h2>
 
 <div class="row">
-  <div class="col-sm-6 offset-sm-3">
+  <div class="col-xl-6 offset-xl-3">
     
     <%= form_with(model: @house, local: true) do |f| %>
       <%= render 'layouts/error_messages', model: f.object %>
       <%# エラーメッセージ %>
     
       <div class="form-group">
-        <%= f.label :title, '募集件名' %>
-        <%= f.text_field :title, class: 'form-control' %>
+        <%= f.label :title, '募集タイトル' %>
+        <%= f.text_field :title, class: 'form-control', placeholder: 'ex. 【錦糸町付近にて同居希望！】' %>
       </div>
       
       <div class="form-group">
-        <%= f.label :place, '場所' %>
-        <%= f.text_field :place, class: 'form-control' %>
+        <%= f.label :place, '居住場所または希望場所' %>
+        <%= f.text_field :place, class: 'form-control', placeholder: 'ex. 錦糸町を含む総武線付近での居住を予定' %>
       </div>
       
       <div class="form-group">
-        <%= f.label :room_size, '部屋の広さ' %>
-        <%= f.text_field :room_size, class: 'form-control' %>
+        <%= f.label :room_size, '部屋の広さ（１人当たり）' %>
+        <%= f.text_field :room_size, class: 'form-control', placeholder: 'ex. 約６〜８畳で検討中' %>
       </div>
       
       <div class="form-group">
-        <%= f.label :rent, '賃料' %>
-        <%= f.text_field :rent, class: 'form-control' %>
+        <%= f.label :rent, '賃料（１人当たり）' %>
+        <%= f.text_field :rent, class: 'form-control', placeholder: 'ex. 約５〜６万円で検討中' %>
       </div>
       
       <div class="form-group">
-        <%= f.label :gender, '性別' %>
-        <%= f.text_field :gender, class: 'form-control' %>
+        <%= f.label :gender, '性別の希望' %>
+        <%= f.select :gender, [["",""], ["男性","男性"], ["女性","女性"], ["どちらでも可","どちらでも可"]], {}, class: 'form-control' %>
       </div>
       
       <div class="form-group">
-        <%= f.label :special_notes, 'その他特記事項' %>
-        <%= f.text_field :special_notes, class: 'form-control' %>
+        <%= f.label :special_notes, '自己紹介・特記事項' %>
+        <%= f.text_area :special_notes, class: 'form-control', placeholder: 'ex. 上京したての大学生です。・・・・・' %>
       </div>
       
-      <%= f.submit '新規募集登録', class: 'btn btn-primary btn-block' %>
+      <%= f.submit '投稿', class: 'btn btn-blue btn-block' %>
     <% end %>
   </div>
 </div>

@@ -1,14 +1,13 @@
 <% if current_user.permit_share?(house, user.id) %>
-  <%#= current_user.permit_share?(house) %>
   <%= form_with( url: unpermit_share_path, local: true, method: :delete) do |f| %>
     <%= hidden_field_tag :user_id, user.id %>
     <%= hidden_field_tag :house_id, house.id %>
-    <%= f.submit '許可の取り消し', class: 'btn btn-danger btn-block' %>
+    <%= f.submit '許可の取り消し', class: 'btn btn-yellow ok-btn' %>
   <% end %>
 <% else %>
   <%= form_with( url: permit_share_path, local: true) do |f| %>
     <%= hidden_field_tag :user_id, user.id %>
     <%= hidden_field_tag :house_id, house.id %>
-    <%= f.submit '申請を許可する', class: 'btn btn-primary btn-block' %>
+    <%= f.submit '申請を許可する', class: 'btn btn-red ok-btn' %>
   <% end %>
 <% end %>

@@ -1,25 +1,24 @@
 <div class="row">
-  <div class="col-lg-6">
-    <div class="center jumbotron">
-      <div class="text-center">
-        <h1>Welcome</h1><br>
-        <h1>to the</h1><br>
-        <h4>シェアハウス</h4>
-        <h4>マッチングアプリ</h4>
+  <div class="col-xl-3"></div>
+  <div class="col-xl-6">
+    <div class="jumbotron text-center">
+      <div class="new-user-title">
+        <h3>Welcome</h3>
+        <h3>to</h3>
+        <h3>Find famfam</h3>
+        <h5>同居人</h5>
+        <h5>マッチングアプリ</h5>
       </div>
     </div>
   </div>
-</div>
+  <div class="col-xl-3"></div>
+  
+  <div class="col-xl-3"></div>
+  <div class="col-xl-6">
+    <div class="text-center">
+      <h2>新規ユーザー登録</h2>
+    </div>
 
-
-<div class="text-center">
-  <h2>新規登録</h2>
-</div>
-<br>
-
-<div class="row">
-  <div class="col-sm-6 offset-sm-3">
-    
     <%= form_with(model: @user, local: true) do |f| %>
       <%= render 'layouts/error_messages', model: f.object %>
       <%# エラーメッセージ %>
@@ -44,7 +43,8 @@
         <%= f.password_field :password_confirmation, class: 'form-control' %>
       </div>
       
-      <%= f.submit '新規登録', class: 'btn btn-primary btn-block' %>
+      <%= f.submit '新規登録', class: 'btn btn-red btn-block' %>
     <% end %>
   </div>
+  <div class="col-xl-3"></div>
 </div>

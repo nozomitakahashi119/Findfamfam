@@ -5,14 +5,14 @@ class HousesController < ApplicationController
   def index
     if logged_in?
       @house = current_user.houses.build #form_with用
-      @houses = House.order(id: :desc).page(params[:page]) #ハウスクラス全体の募集の表示
+      @houses = House.order(id: :desc).page(params[:page]).per(15) #ハウスクラス全体の募集の表示
     end
   end
   
   def my_index
     if logged_in?
       @house = current_user.houses.build #form_with用
-      @houses = current_user.houses.order(id: :desc).page(params[:page]) #自分の投稿の一覧表示
+      @houses = current_user.houses.order(id: :desc).page(params[:page]).per(15) #自分の投稿の一覧表示
       render :index #houses/index.html.erbへの遷移を指定
     end
   end
@@ -20,8 +20,16 @@ class HousesController < ApplicationController
   def my_request_index
     if logged_in?
       @house = current_user.houses.build #form_with用
-      @houses = Share.where(user_id: current_user).page(params[:page]) #自分が申請した一覧表示
+      @houses = Share.where(user_id: current_user).page(params[:page]).per(15) #自分が申請した一覧表示
       render :request_index #houses/request_index.html.erbへの遷移を指定
+    end
+  end
+  
+  def my_like_index
+    if logged_in?
+      @house = current_user.houses.build #form_with用
+      @houses = current_user.likes.order(id: :desc).page(params[:page]).per(15) #自分の投稿の一覧表示
+      render :index #houses/index.html.erbへの遷移を指定
     end
   end
 
@@ -54,8 +62,8 @@ class HousesController < ApplicationController
   private
   
   def house_params
-    #params.require(:house).permit(:title, :place, :room_size, :rent, :gender, :special_notes)
-    params.permit(:title, :place, :room_size, :rent, :gender, :special_notes)
+    params.require(:house).permit(:title, :place, :room_size, :rent, :gender, :special_notes)
+    #params.permit(:title, :place, :room_size, :rent, :gender, :special_notes)
   end
   
 end

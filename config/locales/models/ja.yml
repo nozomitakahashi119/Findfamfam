@@ -1,0 +1,21 @@
+ja:
+  activerecord:
+    models:
+      house: 同居人募集
+    attributes:
+      house:
+        title: "募集タイトル"
+        place: "居住場所または希望場所"
+        room_size: "部屋の広さ"
+        rent: "賃料"
+        gender: "性別の希望"
+        special_notes: "自己紹介・特記事項"
+
+ja:
+  views:
+    pagination:
+      first: "&laquo; 最初"
+      last: "最後 &raquo;"
+      previous: "&lsaquo; 前"
+      next: "次 &rsaquo;"
+      truncate: "..."

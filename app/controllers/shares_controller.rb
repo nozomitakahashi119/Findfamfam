@@ -5,14 +5,14 @@ class SharesController < ApplicationController
     house = House.find(params[:house_id])
     current_user.request(house)
     flash[:success] = '同居申請をしました。'
-    redirect_to houses_path
+    redirect_to house_path(params[:house_id])
   end
 
   def destroy
     house = House.find(params[:house_id])
     current_user.unrequest(house)
     flash[:success] = '同居申請を取り消しました'
-    redirect_to houses_path
+    redirect_to house_path(params[:house_id])
   end
   
   def permit_share  #users_controllerにこちらのメソッドを書いても同様の動きをした

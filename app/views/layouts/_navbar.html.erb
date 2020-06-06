@@ -1,24 +1,29 @@
-<header class="mb-4">
-  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-    <div class="text-muted">
+<header class="sticky-top mb-4">
+  <nav class="navbar navbar-expand-sm navbar-white">
     <% if logged_in? %>
       こんにちは、<%= current_user.name %>さん！
     <% else %>
       こんにちは、ゲストさん！
     <% end %>
+    
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+      <div class="navbar-nav apptitle">
+        Findfamfam
+      </div>
     </div>
- 
     
     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
       <ul class="navbar-nav">
         <% if logged_in? %>
-          <li class="nav-item"><%= link_to 'My Home', users_path, class: 'nav-link' %></li>
-          <li class="nav-item"><%= link_to 'Logout', logout_path, class: 'nav-link', method: :delete %></li>
+          <li class="nav-item"><%= link_to 'Home', users_path, class: 'btn btn-red btn-nav' %></li>
+          <li class="nav-item"><%= link_to 'ログアウト', logout_path, class: 'btn btn-red btn-nav', method: :delete %></li>
         <% else %>
-          <li class="nav-item"><%= link_to 'Signup', signup_path, class: 'nav-link' %></li>
-          <li class="nav-item"><%= link_to 'Login', login_path, class: 'nav-link' %></li>
+          <li class="nav-item"><a class="btn btn-red btn-nav" href="signup" role="button">新規登録</a></li>
+          <li class="nav-item"><a class="btn btn-red btn-nav" href="login" role="button">ログイン</a></li>
         <% end %>
+        <%# リンクは上記どの形でも良い %>
       </ul>
     </div>
+    
   </nav>
 </header>

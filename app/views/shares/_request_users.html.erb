@@ -1,5 +1,9 @@
-<% house.shares.each do |share| %>
-    <p><%= share.user.name %></p>
-    <%= render 'shares/ok_button', user: share.user, house: house %>
-<% end %>
-
+<div class="house-title mt-5">他のユーザーからの同居リクエスト</div>
+  <% house.shares.each do |share| %>
+    <div class="row request-card">
+      <div class="card">
+        <div class="card-head text-center house-text blue-link"><i class="fas fa-user"></i>  <%= link_to share.user.name, user_path(share.user) %></div>
+        <div class="card-text"><%= render 'shares/ok_button', user: share.user, house: house %></div>
+      </div>
+    </div>
+  <% end %>

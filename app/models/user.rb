@@ -11,8 +11,7 @@ class User < ApplicationRecord
   
   has_many :requestings, through: :shares, source: :house #リクエストしている募集の取得
   has_many :reverses_of_share, class_name: 'Share', foreign_key: 'ok_request' #自分の募集にリクエストしてくれているユーザーへの参照
-  #has_many :requesters, through: reverses_of_share, source: :share #自分の募集にリクエストしてくれているユーザー達
-  
+
   def request(house) #申請する動き
     self.shares.find_or_create_by(house_id: house.id)
   end
@@ -36,23 +35,8 @@ class User < ApplicationRecord
     share = self.shares.find_by(ok_request: shares.id)
     share.destroy if share
 =end
-
-  #has_many :ok_requestings, through: :houses, source: :shares #許可している募集の取得
-  has_many :ok_requestings, through: :shares, :foreign_key => 'ok_request', source: :house
   
-  def ok_request?(house) #申請してるかの確認
-    self.ok_requestings.include?(house)
-  end
-  
-  def permitted_appliments?(house)
-    return self.shares.where(ok_request: 1)
-  end
-  
-  def p
-    Share.find_by(house_id: 4)
-  end
-  
-  def permit_share?(house, user_id) #申請してるかの確認
+  def permit_share?(house, user_id) #申請してるかの確認 #コントローラーに結局記載
     #count = Share.find_by(house_id: 4)&.ok_request == true
     #count > 0 
     #return count > 0
@@ -65,12 +49,6 @@ class User < ApplicationRecord
     #Share.where(ok_request: 1).count > 0
     #return self.shares.where(ok_request: 1)
   end
-  
-  def permit_shareO?(zero="0") #申請してるかの確認
-    count = self.shares.where(ok_request: true).count
-    count > 0 ? count.to_s : zero
-  end
-  
   
   has_many :favorites
   has_many :likes, through: :favorites, source: :like

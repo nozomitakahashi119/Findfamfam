@@ -1,28 +1,18 @@
-<div class="row">
-  <div class="col-lg-6">
-    <div class="center jumbotron">
-      <div class="text-center">
-        <h1>Welcome</h1><br>
-        <h1>to the</h1><br>
-        <h4>シェアハウス</h4>
-        <h4>マッチングアプリ</h4>
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-xl-6">
+      <div class="jumbotron">
+        <h3>Welcome</h3>
+        <h3>to</h3>
+        <h3>Find famfam</h3>
+        <h5>同居人</h5>
+        <h5>マッチングアプリ</h5>
       </div>
     </div>
-  </div>
-</div>
-
-<div class="text-center">
-  <h2>ログイン</h2>
-</div>
-<br>
-
-
-
-<div class="row">
-  <div class="col-sm-6 offset-sm-3">
-    
-    <%= form_with(url: login_path, scope: :session, local: true) do |f| %>
-    
+    <div class="col-xl-1"></div>
+    <div class="col-xl-4">
+      <div class="mt-5 ml-3 thema"><h1>誰かと共に過ごす人生を</h1></div>
+        <%= form_with(url: login_path, scope: :session, local: true) do |f| %>
       <div class="form-group">
         <%= f.label :name, 'ユーザー名' %>
         <%= f.text_field :name, class: 'form-control' %>
@@ -33,11 +23,99 @@
         <%= f.password_field :password, class: 'form-control' %>
       </div>
     
-      <%= f.submit 'ログイン', class: 'btn btn-primary btn-block' %>
+      <%= f.submit 'ログイン', class: 'btn btn-red btn-block' %>
     
-    <% end %>
+      <% end %>
     
-    <p><%= link_to '新規登録の方はこちら！', signup_path %></p>
+      <div class="text-center">
+        <p class="blue-link"><%= link_to '新規登録の方はこちら！', signup_path %></p>
+      </div>
+    </div>
+  
+    <div class="col-xl-1 mb-5"></div>
+  
+  
+    <div class="row">
+      <section>
+        <div class="col-xl-12">
+          <h2 class="top-title">--About--</h2>
+            <p class="top-text">
+              『Findfamfam』とは、「これからシェアハウスがしたい！」「住みたい家があるけど一人じゃ高くて住めない...」
+              「同じ趣味を持った人と楽しい時間を共有したい」といった様々なニーズを叶えるために生まれた同居人マッチング
+              サービスです。ユーザー登録をすると同居人を募集したり、応募したりすることができます。
+            </p>
+        </div>
+      </section>
+    </div>
     
+  <div class="row">
+    <section>
+      <div class="row">
+        <div class="col-xl-12">
+          <h2 class="top-title2">--How to Use--</h2>
+          <p class="top-text2">
+            このサービスは3つステップで簡単に楽しむことできます。
+          </p>
+        </div>
+      
+        <div class="col-xl-4">
+          <div class="card text-center">
+            <div class="top-subtitle">
+              ユーザー登録 <i class="fas fa-user"></i>
+            </div>
+          </div>
+          <div class="card card-body">
+            <div class="top-subtext">
+              メールアドレスとパスワードで簡単登録！
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-xl-4">
+          <div class="card text-center">
+            <div class="top-subtitle">
+              同居人を募集 <i class="fas fa-home"></i>
+            </div>
+          </div>
+          <div class="card card-body">
+            <div class="top-subtext">
+              住む予定の場所や募集する人数などを入力して募集をかけよう！<br>
+              他のユーザーからの同居リクエストを許可するとマッチ成立です！
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-xl-4">
+          <div class="card text-center">
+            <div class="top-subtitle">
+              同居リクエストをする <i class="fas fa-glass-cheers"></i>
+            </div>
+          </div>
+          <div class="card card-body">
+            <div class="top-subtext">
+              他のユーザーが出している募集に同居リクエストをしてみよう!<br>
+              募集主がリクエストを許可するとマッチ成立です！
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+    
+  <div class="row">
+    <section>
+      <div class="col-xl-12">
+        <h2 class="top-title">--History--</h2>
+          <p class="top-text">
+            Findfamfamは、あるTV番組を見ていた開発者の思いから生まれました。
+            そのTV番組では、海外から日本に働きに来た外国の方が築年数の経った木造アパートで生活し、
+            寂しさを訴えている内容でした。<br>
+            少人数でのシェアハウスには、人間関係や資金関係、各種条件等において越えなければならない壁が多くあります。
+            このシステムはそういった障害を乗り越える一歩になる。このシステムが世界の全ての人の人生に彩りを加えることが
+            できるのではないか、そう考えこのサービスの開発に取り組みました。
+          </p>
+        </div>
+      </section>
+    </div>
   </div>
 </div>

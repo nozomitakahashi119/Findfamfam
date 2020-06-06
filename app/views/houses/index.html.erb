@@ -1,18 +1,21 @@
 <div class="row">
-  <div class="col-sm-6">
+  <div class="col-xl-1"></div>
+  <div class="col-xl-10 col-sm-12">
     <ul class="list-unstyled">
       <% @houses.each do |house| %>
-        <li class="card">
-          <div class="card-body">
-            <div>募集者　：<%= link_to house.user.name, user_path(house.user) %></div>
-            <div>投稿日　：<%= house.created_at %></div>
-            <div>タイトル：<%= link_to house.title, house_path(house.id) %></div>
-          </div>
+        <li class="card house">
+            <div class="h5 house-card blue-link"><%= link_to house.title, house_path(house.id) %></div>
+            <div class="p house-card">『<%= house.special_notes.truncate(20) %>』</div>
+            <div class="p house-card text-left">投稿日(<%= house.created_at.strftime('%Y/%m/%d') %>)</div>
+            <div class="p house-card text-left blue-link">募集主<i class="fas fa-user"></i> <%= link_to house.user.name, user_path(house.user) %></div>
         </li>
-        <br>
       <% end %>
-      <%= paginate @houses %>
-      <%= link_to '同居募集の新規作成', new_house_path %>
+      
+      <%= paginate @houses, class: 'paginate' %>
+        <div class="col-xl-12 form-btn center">
+          <%= link_to '同居人を募集する', new_house_path, class: 'btn btn-blue btn-block mt-3 ' %>
+        </div>
     </ul>
   </div>
+  <div class="col-xl-1"></div>
 </div>

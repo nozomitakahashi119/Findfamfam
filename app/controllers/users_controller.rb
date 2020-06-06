@@ -1,9 +1,13 @@
 class UsersController < ApplicationController
   before_action :require_user_logged_in, only: [:index, :show, :edit] #ログインユーザーしか触れない
-  #before_action :correct_user, only: [:show, :edit, :update]
+  before_action :correct_user, only: [:edit, :update]
   
   def index
     #マイホーム、各ページへのリンクがある
+  end
+  
+  def to_do_list
+    #これからのやることリストのページ
   end
 
   def show
@@ -25,6 +29,7 @@ class UsersController < ApplicationController
       flash.now[:danger] = 'ユーザーの登録に失敗しました。'
       render :new
     end
+    
   end
   
   def edit
@@ -32,11 +37,9 @@ class UsersController < ApplicationController
   end
   
   def update
-    
     @user = User.find(params[:id])
     
     if current_user == @user
-    
       if @user.update(user_params)
         flash[:success] = 'ユーザー情報を更新しました。'
         redirect_to root_path
@@ -44,7 +47,6 @@ class UsersController < ApplicationController
         flash.now[:danger] = 'ユーザー情報を更新できませんでした'
         render :edit
       end
-      
     else
       redirect_to root_path
     end
@@ -59,13 +61,10 @@ class UsersController < ApplicationController
     params.require(:user).permit(:name, :email, :password, :password_confirmation, :age, :gender, :income, :hobby, :special_notes )
   end
 
-  
-=begin
-  def correct_user #本人かどうか確認、違うとすれば一覧に遷移
-    @user = current_user.users.find_by(params[:id])
-    unless @user
-      redirect_to root_url
-    end
-=end
+  # 本人と違うとすれば一覧に遷移
+  def correct_user
+    @user = User.find(params[:id])
+    redirect_to(houses_path) unless current_user?(@user)
+  end
 
 end

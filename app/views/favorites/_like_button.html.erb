@@ -1,11 +1,11 @@
 <% if current_user.like?(house) %>
   <%= form_with(model: current_user.favorites.find_by(like_id: house.id), local: true, method: :delete) do |f| %>
     <%= hidden_field_tag :like_id, house.id %>
-    <%= f.submit 'お気に入りから外す', class: 'btn btn-danger btn-sm' %>
+    <%= f.submit 'お気に入りから外す', class: 'btn btn-yellow btn-block btn-lg' %>
   <% end %>
 <% else %>
   <%= form_with(model: current_user.favorites.build, local: true) do |f| %>
     <%= hidden_field_tag :like_id, house.id %>
-    <%= f.submit 'お気に入り！', class: 'btn btn-primary btn-sm' %>
+    <%= f.submit 'お気に入り！', class: 'btn btn-red btn-block btn-lg' %>
   <% end %>
 <% end %>
