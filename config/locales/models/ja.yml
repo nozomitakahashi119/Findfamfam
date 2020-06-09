@@ -1,7 +1,7 @@
 ja:
   activerecord:
     models:
-      house: 同居人募集
+      house: 
     attributes:
       house:
         title: "募集タイトル"
