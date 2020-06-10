@@ -106,7 +106,8 @@ footer{
 }
 
 .jumbotron {
-  background-image: url(img2.jpg);
+  /*background-image: url(img2.jpg);だとEC2で反映されない*/
+  background-image: image-url('top-img.png');
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -129,7 +130,7 @@ footer{
 }
 
 .footer-img {
-  background-image: url(house3.jpg);
+  background-image: image-url('footer-img.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -240,7 +241,7 @@ section {
 }
 
 .topic1 {
-  background-image: url(img4.jpg);
+  background-image: image-url('index-img1.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -281,7 +282,7 @@ section {
   }
 
 .topic2 {
-  background-image: url(img1.jpg);
+  background-image: image-url('index-img2.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -322,7 +323,7 @@ section {
   }
 
 .topic3 {
-  background-image: url(toppage3.jpg);
+  background-image: image-url('index-img3.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -363,7 +364,7 @@ section {
   }
 
 .topic4 {
-  background-image: url(img5.jpg);
+  background-image: image-url('index-img4.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -404,7 +405,7 @@ section {
   }
 
 .topic5 {
-  background-image: url(toppage2.jpg);
+  background-image: image-url('index-img5.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -445,7 +446,7 @@ section {
   }
   
 .topic6 {
-  background-image: url(toppage1.jpg);
+  background-image: image-url('index-img6.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -486,7 +487,7 @@ section {
   }
   
 .topic7 {
-  background-image: url(img7.jpg);
+  background-image: image-url('index-img7.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
