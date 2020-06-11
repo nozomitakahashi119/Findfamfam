@@ -107,7 +107,7 @@ footer{
 
 .jumbotron {
   /*background-image: url(img2.jpg);だとEC2で反映されない*/
-  background-image: image-url('top-img.png');
+  background-image: url('top-img.png');
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -130,7 +130,7 @@ footer{
 }
 
 .footer-img {
-  background-image: image-url('footer-img.png');
+  background-image: url('footer-img.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -241,7 +241,7 @@ section {
 }
 
 .topic1 {
-  background-image: image-url('index-img1.png');
+  background-image: url('index-img1.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -282,7 +282,7 @@ section {
   }
 
 .topic2 {
-  background-image: image-url('index-img2.png');
+  background-image: url('index-img2.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -323,7 +323,7 @@ section {
   }
 
 .topic3 {
-  background-image: image-url('index-img3.png');
+  background-image: url('index-img3.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -364,7 +364,7 @@ section {
   }
 
 .topic4 {
-  background-image: image-url('index-img4.png');
+  background-image: url('index-img4.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -405,7 +405,7 @@ section {
   }
 
 .topic5 {
-  background-image: image-url('index-img5.png');
+  background-image: url('index-img5.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -446,7 +446,7 @@ section {
   }
   
 .topic6 {
-  background-image: image-url('index-img6.png');
+  background-image: url('index-img6.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -487,7 +487,7 @@ section {
   }
   
 .topic7 {
-  background-image: image-url('index-img7.png');
+  background-image: url('index-img7.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
