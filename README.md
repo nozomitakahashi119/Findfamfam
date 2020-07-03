@@ -1,6 +1,6 @@
 # README
 
-![ramenTimer](https://〜.gif)
+![Uploading top.png…]()
 
 <h2 align="center">Ramen Timer</h2>
 
