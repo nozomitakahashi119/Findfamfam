@@ -14,16 +14,16 @@ Findfamfam can recruit homemates or run for homemates / Findfamfamは同居人�
  
 # 📗Usage / 使用方法
 
-1 Register and log in / ユーザー登録をしてログインをしよう
-２ Request a cohabitation request and wait for approval / 募集に同居リクエストをして承認を待とう
-3 Recruit and collect people living together / 募集をかけて同居人を集めよう
+1 Register and log in / ユーザー登録をしてログインをしよう  
+２ Request a cohabitation request and wait for approval / 募集に同居リクエストをして承認を待とう  
+3 Recruit and collect people living together / 募集をかけて同居人を集めよう  
  
 # ☔️Note / 注意点
  
 # 🔥Author / 作成情報
  
-* Name → Nozomi Takahashi / 髙橋　信望実
-* Belongs → Fire Dept of Aikta / 秋田の広域消防
+Name → Nozomi Takahashi / 髙橋　信望実  
+Belongs → Fire Dept of Aikta / 秋田の広域消防
  
 # 🎓License / ライセンス
  
