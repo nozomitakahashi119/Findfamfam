@@ -1,6 +1,6 @@
 # README：）
 
-### 📱AppName "Findfamfam"
+## 📱AppName "Findfamfam"
  
 "Findfamfam" is a livingmate matching app with Ruby / 「Findfamfam」はRubyを用いた同居人マッチングアプリです
  
