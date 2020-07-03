@@ -2,11 +2,11 @@
 
 # Findfamfam
  
-"Findfamfam" is a livingmate matching app with Ruby / 「Findfamfam」　はRubyを用いた同居人マッチングアプリです
+"Findfamfam" is a livingmate matching app with Ruby / 「Findfamfam」はRubyを用いた同居人マッチングアプリです
  
 # Features
  
-Findfamfam can recruit homemates or run for homemates / Findfamfam　は同居人を募集したり、同居人に立候補することができます
+Findfamfam can recruit homemates or run for homemates / Findfamfamは同居人を募集したり、同居人に立候補することができます
  
 # Requirement
 
