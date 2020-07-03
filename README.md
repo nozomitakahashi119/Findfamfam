@@ -13,6 +13,10 @@ Findfamfam can recruit homemates or run for homemates / Findfamfamは同居人�
 * Ruby version: Rails 5.2.4.2
  
 # 📗Usage / 使用方法
+
+1 Register and log in / ユーザー登録をしてログインをしよう
+２ Request a cohabitation request and wait for approval / 募集に同居リクエストをして承認を待とう
+3 Recruit and collect people living together / 募集をかけて同居人を集めよう
  
 # ☔️Note / 注意点
  
