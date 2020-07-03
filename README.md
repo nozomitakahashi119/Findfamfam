@@ -14,9 +14,9 @@ Findfamfam can recruit homemates or run for homemates / Findfamfamは同居人�
  
 # 📗Usage / 使用方法
  
-# ⛈Note / 注意点
+# ☔️Note / 注意点
  
-# 🚒Author / 作成情報
+# 🔥Author / 作成情報
  
 * Name → Nozomi Takahashi / 髙橋　信望実
 * Belongs → Fire Dept of Aikta / 秋田の広域消防
