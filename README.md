@@ -1,18 +1,5 @@
 # README
 
-![Uploading top.png…]()
-
-<h2 align="center">Ramen Timer</h2>
-
-<p align="center">
-  <a href="vue公式サイトURL"><img src="https://〜.png" width="80px;" /></a>
-  <br>
-  <a href="PWA公式サイトURL"><img src="https://〜.png" height="45px;" /></a>
-  <a href="Firebase公式サイトURL"><img src="https://〜.png" height="45px;" /></a>
-  <a href="firealpaca公式サイトURL"><img src="https://〜.png" height="40px;" /></a>
-  <a href="sweetalert公式サイトURL"><img src="https://〜.png" height="45px;" /></a>
-</p>
-
 # Findfamfam
  
 "Findfamfam" is a livingmate matching app with Ruby
@@ -27,41 +14,15 @@ Findfamfam　は同居人を募集したり、同居人に立候補すること�
 
 * Ruby version: Rails 5.2.4.2
  
-# Installation
+# Usage　基本的な使い方
  
-Requirementで列挙したライブラリなどのインストール方法を説明する
+# Note　注意点
  
-```bash
-pip install huga_package
-```
- 
-# Usage
- 
-DEMOの実行方法など、"hoge"の基本的な使い方を説明する
- 
-```bash
-git clone https://github.com/hoge/~
-cd examples
-python demo.py
-```
- 
-# Note
- 
-注意点などがあれば書く
- 
-# Author
- 
-作成情報を列挙する
+# Author　作成情報
  
 * 作成者
 * 所属
-* E-mail
  
-# License
-ライセンスを明示する
+# License　ライセンスを明示する
  
-"hoge" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
- 
-社内向けなら社外秘であることを明示してる
- 
-"hoge" is Confidential.
+"Findfamfam" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
