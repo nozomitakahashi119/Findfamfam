@@ -12,7 +12,7 @@ Findfamfam can recruit homemates or run for homemates / Findfamfamは同居人�
 
 * Ruby version: Rails 5.2.4.2
  
-# Usage　基本的な使い方
+# Usage　使用方法
  
 # Note　注意点
  
