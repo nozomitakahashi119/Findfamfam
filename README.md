@@ -4,7 +4,7 @@
  
 "Findfamfam" is a livingmate matching app with Ruby / 「Findfamfam」はRubyを用いた同居人マッチングアプリです
  
-## ❗️　eatures / 特徴
+## ❗️　Features / 特徴
  
 Findfamfam can recruit homemates or run for homemates / Findfamfamは同居人を募集したり、同居人に立候補することができます
  
