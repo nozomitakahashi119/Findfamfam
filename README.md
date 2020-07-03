@@ -21,7 +21,7 @@ Ruby version: Rails 5.2.4.2
 ## ☔️　Note / 注意点
  
 This app is in development, working with minimal features / このアプリは発展途上です、最低限の機能で動いています  
-Please look forward to it / これからに期待してください
+Please look forward to it / これからに期待してください😂
 
 ## 🔥　Author / 作成情報
  
