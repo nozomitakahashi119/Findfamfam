@@ -2,7 +2,7 @@
 
 ## 📱　AppName "Findfamfam"
  
-"Findfamfam" is a livingmate matching app with Ruby / 「Findfamfam」はRubyを用いた同居人マッチングアプリです
+"Findfamfam" is a livingmate matching app with Ruby🟥 / 「Findfamfam」はRubyを用いた同居人マッチングアプリです
  
 ## ❗️　Features / 特徴
  
